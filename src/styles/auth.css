@@ -1,0 +1,53 @@
+/* ── Pantallas de acceso (login / registro / recuperar) ── */
+.auth-screen { min-height: 100vh; background: var(--ink); color: #fff; position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 48px 16px; }
+.auth-screen .auth-logo img { height: 118px; width: auto; margin: 0 auto 46px; }
+.auth-form { width: min(300px, 100%); position: relative; z-index: 2; }
+.auth-form .pill { display: block; width: 100%; height: 40px; border-radius: 999px; border: 1px solid #fff; background: #fff; color: var(--ink); padding: 0 16px; font-size: 14px; margin-bottom: 18px; outline: none; transition: box-shadow .18s; }
+.auth-form .pill:focus { box-shadow: 0 0 0 3px rgba(240, 98, 58, .55); }
+.auth-form .pill::placeholder { color: #8b89a0; }
+.auth-form .pillbtn { display: block; width: 100%; height: 40px; border-radius: 999px; border: 0; background: var(--accent); color: #fff; font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; margin-top: 14px; transition: background .18s; }
+.auth-form .pillbtn:hover { background: var(--accent-light); }
+.auth-form .pillbtn[disabled] { opacity: .6; }
+.auth-links { margin-top: 34px; text-align: center; font-size: 14px; color: rgba(255, 255, 255, .82); display: grid; gap: 10px; position: relative; z-index: 2; }
+.auth-links a { color: #fff; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.auth-links a.soft { font-weight: 500; color: rgba(255, 255, 255, .78); }
+.auth-notice { border-radius: 10px; padding: 10px 14px; font-size: 13px; margin-bottom: 18px; line-height: 1.45; }
+.auth-notice-error { background: #ffe1d8; color: #7b1d06; }
+.auth-notice-ok { background: #dff0dc; color: #1f4d25; }
+.auth-icons { display: flex; gap: 22px; align-items: center; justify-content: center; margin-top: 46px; color: var(--accent-light); position: relative; z-index: 2; }
+.auth-icons svg { width: 26px; height: 26px; }
+.auth-illus { position: absolute; left: -40px; bottom: -30px; width: min(420px, 42vw); z-index: 1; pointer-events: none; }
+.auth-illus-right { position: absolute; right: -60px; top: 40px; width: min(300px, 30vw); z-index: 1; pointer-events: none; opacity: .9; }
+.auth-back { position: absolute; top: 22px; left: 24px; z-index: 3; color: rgba(255, 255, 255, .8); font-size: 14px; }
+.auth-back:hover { color: #fff; }
+.auth-check { display: flex; gap: 10px; align-items: flex-start; font-size: 12px; color: rgba(255, 255, 255, .8); margin: 4px 0 6px; line-height: 1.45; }
+.auth-check input { margin-top: 2px; accent-color: var(--accent); }
+.auth-check a { color: #fff; text-decoration: underline; }
+.auth-hint { font-size: 11px; color: rgba(255, 255, 255, .6); margin: -10px 0 16px 14px; }
+
+/* Registro: banda de marca + tarjeta blanca (como la referencia) */
+.reg-screen { min-height: 100vh; background: #f6f5f1; position: relative; }
+.reg-band { background: var(--ink); height: 214px; display: flex; justify-content: center; padding-top: 30px; }
+.reg-band img { height: 92px; width: auto; }
+.reg-card { position: relative; width: min(588px, calc(100% - 32px)); margin: -64px auto 40px; background: #fff; box-shadow: 0 20px 50px rgba(2, 2, 53, .1); padding: 48px 24px 40px; text-align: center; border-radius: 2px; }
+.reg-card h1 { font-family: var(--font-body); text-transform: none; letter-spacing: -.01em; font-size: 22px; font-weight: 700; line-height: 1.3; color: var(--ink); }
+.reg-card .sub { font-size: 13px; color: var(--muted); margin: 8px auto 40px; }
+.reg-card form { width: min(254px, 100%); margin: 0 auto; text-align: left; }
+.reg-card .pill { display: block; width: 100%; height: 36px; border-radius: 999px; border: 1px solid #9c9aad; background: #fff; color: var(--ink); padding: 0 14px; font-size: 14px; margin-bottom: 8px; outline: none; }
+.reg-card .pill:focus { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 15%, transparent); }
+.reg-card .pillbtn { display: block; width: calc(100% + 16px); margin: 26px -8px 0; height: 36px; border-radius: 999px; border: 0; background: var(--ink); color: #fff; font-size: 14px; font-weight: 700; text-transform: uppercase; transition: background .18s; }
+.reg-card .pillbtn:hover { background: var(--accent); }
+.reg-card .auth-check { color: var(--muted); }
+.reg-card .auth-check a { color: var(--ink); }
+.reg-card .legal { font-size: 12px; color: var(--muted); margin: 24px auto 0; }
+.reg-card .legal a { color: var(--ink); text-decoration: underline; }
+.reg-card .auth-notice { text-align: left; }
+.reg-card .already { margin-top: 18px; font-size: 13px; color: var(--muted); }
+.reg-card .already a { color: var(--ink); font-weight: 700; text-decoration: underline; }
+.reg-foot { text-align: center; font-size: 12px; color: var(--muted); padding-bottom: 30px; }
+
+@media (max-width: 720px) {
+  .auth-illus { width: 220px; left: -50px; bottom: -40px; opacity: .45; }
+  .auth-illus-right { display: none; }
+  .auth-screen .auth-logo img { height: 92px; margin-bottom: 34px; }
+}

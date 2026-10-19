@@ -1,0 +1,9 @@
+# HTTPS automático (Let's Encrypt). Reemplazá el dominio por el tuyo en DOMAIN (.env.production).
+{$DOMAIN} {
+	encode gzip
+	# subidas de videos por partes (5 MB por parte)
+	request_body {
+		max_size 20MB
+	}
+	reverse_proxy app:3000
+}

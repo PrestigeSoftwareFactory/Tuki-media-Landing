@@ -1,0 +1,25 @@
+.rc-page { min-height: 100vh; background: #e7e3da; padding: 24px 16px 48px; }
+.rc-toolbar { max-width: 760px; margin: 0 auto 16px; display: flex; justify-content: space-between; align-items: center; font-size: 14px; }
+.rc { max-width: 760px; margin: 0 auto; background: #fff; border-radius: 6px; box-shadow: 0 20px 50px rgba(2, 2, 53, .12); padding: 36px; border-top: 8px solid var(--accent); }
+.rc header { display: flex; justify-content: space-between; align-items: center; gap: 20px; border-bottom: 1px solid var(--line); padding-bottom: 20px; margin-bottom: 22px; }
+.rc header img { height: 64px; width: auto; }
+.rc header div { text-align: right; }
+.rc h1 { font-size: 34px; }
+.rc header p { color: var(--muted); margin-top: 6px; max-width: none; }
+.rc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 26px; }
+.rc-grid small { display: block; color: var(--muted); margin-bottom: 4px; font-size: 11px; }
+.rc-grid strong { display: block; font-size: 14px; }
+.rc-grid span { display: block; font-size: 13px; color: var(--muted); word-break: break-all; }
+.rc table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.rc th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); border-bottom: 1px solid var(--line); padding: 8px 0; }
+.rc td { padding: 10px 0; border-bottom: 1px solid #f1eee8; }
+.rc .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.rc tfoot td { border-bottom: 0; padding: 6px 0; color: var(--muted); }
+.rc tfoot tr.total td { color: var(--ink); font-size: 18px; font-weight: 700; padding-top: 12px; border-top: 1px solid var(--line); }
+.rc-note { margin-top: 26px; font-size: 12px; color: var(--muted); max-width: none; }
+@media (max-width: 600px) { .rc { padding: 22px; } .rc-grid { grid-template-columns: 1fr; } .rc header { flex-direction: column; align-items: flex-start; } .rc header div { text-align: left; } }
+@media print {
+  .rc-page { background: #fff; padding: 0; }
+  .rc-toolbar { display: none; }
+  .rc { box-shadow: none; max-width: none; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}

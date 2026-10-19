@@ -1,0 +1,31 @@
+.cert-page { min-height: 100vh; background: #e7e3da; padding: 24px 16px 48px; }
+.cert-toolbar { max-width: 1100px; margin: 0 auto 18px; display: flex; justify-content: space-between; align-items: center; font-size: 14px; }
+.cert {
+  position: relative; max-width: 1100px; aspect-ratio: 297/210; margin: 0 auto; background: var(--paper);
+  border: 2px solid var(--ink); box-shadow: 0 30px 60px rgba(2, 2, 53, .18); padding: 5% 7%;
+  display: flex; flex-direction: column; overflow: hidden;
+}
+.cert::after { content: ""; position: absolute; inset: 14px; border: 1px solid rgba(2, 2, 53, .25); pointer-events: none; }
+.cert-bar { position: absolute; left: 0; top: 0; bottom: 0; width: 14px; background: var(--accent); }
+.cert header { display: flex; justify-content: space-between; align-items: center; }
+.cert header img { height: clamp(48px, 7vw, 86px); width: auto; }
+.cert-kicker { font-family: var(--font-display); text-transform: uppercase; letter-spacing: .14em; font-size: clamp(12px, 1.3vw, 16px); font-weight: 600; }
+.cert-body { flex: 1; display: flex; flex-direction: column; justify-content: center; text-align: center; align-items: center; }
+.cert-label { font-family: var(--font-display); text-transform: uppercase; letter-spacing: .2em; color: var(--accent); font-weight: 700; font-size: clamp(14px, 1.8vw, 22px); margin-bottom: 2%; }
+.cert-small { font-size: clamp(12px, 1.4vw, 17px); color: var(--muted); max-width: none; }
+.cert h1 { font-size: clamp(36px, 6.4vw, 84px); margin: 1.5% 0; line-height: .95; }
+.cert h2 { font-family: var(--font-display); text-transform: uppercase; font-size: clamp(20px, 3vw, 38px); line-height: 1; margin: 1.2% 0 2%; max-width: 26ch; }
+.cert-meta { font-size: clamp(11px, 1.2vw, 14px); color: var(--muted); max-width: none; }
+.cert footer { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; }
+.cert footer small { display: block; font-size: clamp(9px, 1vw, 12px); color: var(--muted); letter-spacing: .08em; text-transform: uppercase; }
+.cert .sig { display: block; font-family: var(--font-display); font-size: clamp(16px, 2vw, 24px); font-weight: 600; border-top: 1px solid var(--ink); padding-top: 8px; min-width: 220px; }
+.cert-code { text-align: right; }
+.cert-code strong { display: block; font-family: var(--font-display); font-size: clamp(16px, 2vw, 24px); letter-spacing: .08em; }
+.cert-code small:last-child { text-transform: none; letter-spacing: 0; }
+
+@media print {
+  @page { size: A4 landscape; margin: 0; }
+  .cert-page { padding: 0; background: #fff; }
+  .cert-toolbar { display: none; }
+  .cert { max-width: none; width: 297mm; height: 210mm; box-shadow: none; border-width: 2px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
